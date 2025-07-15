@@ -3,9 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Image Search App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <script type="module" crossorigin src="/goit-js-hw-11/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-DqB7j7Ix.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-CWKLx11g.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-BqR2rPeg.css">
   </head>
   <body>
+    <main>
+      <form id="search-form" class="form">
+        <label>
+          <input
+            type="text"
+            name="searchQuery"
+            placeholder="Search images..."
+            required
+          />
+        </label>
+        <button type="submit">Search</button>
+      </form>
+      <div id="loader" class="hidden">Завантаження...</div>
+      <ul class="gallery" id="gallery"></ul>
+      <!-- Gallery -->
+      <!-- <ul class="gallery" id="gallery">
+        <li class="gallery__item">
+          <a href="...large-image.jpg" class="gallery__link">
+            <img src="...small-image.jpg" alt="..." class="gallery__image" />
+          </a>
+          <ul class="info">
+            <li><b>Likes</b><span>1813</span></li>
+            <li><b>Views</b><span>900290</span></li>
+            <li><b>Comments</b><span>229</span></li>
+            <li><b>Downloads</b><span>610937</span></li>
+          </ul>
+        </li>
+      </ul> -->
+    </main>
+
   </body>
 </html>
