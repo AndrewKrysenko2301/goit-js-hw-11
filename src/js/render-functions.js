@@ -2,14 +2,13 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const galleryContainer = document.getElementById('gallery');
-const loader = document.getElementById('loader'); // Убедись, что у тебя есть элемент с id="loader"
+const loader = document.getElementById('loader');
 
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
 
-// 👉 1. Создание галереи
 export function createGallery(images) {
   const markup = images
     .map(
@@ -55,17 +54,14 @@ export function createGallery(images) {
   lightbox.refresh();
 }
 
-// 👉 2. Очистка галереи
 export function clearGallery() {
   galleryContainer.innerHTML = '';
 }
 
-// 👉 3. Показать лоадер
 export function showLoader() {
-  loader.classList.remove('hidden'); // Класс hidden должен скрывать лоадер в CSS
+  loader.classList.remove('hidden');
 }
 
-// 👉 4. Спрятать лоадер
 export function hideLoader() {
   loader.classList.add('hidden');
 }

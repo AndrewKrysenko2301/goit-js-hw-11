@@ -8,6 +8,9 @@ import {
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+iziToast.settings({
+  position: 'topRight',
+});
 
 const form = document.getElementById('search-form');
 const input = form.querySelector('input[name="searchQuery"]');
@@ -22,6 +25,7 @@ form.addEventListener('submit', async e => {
       title: 'Error',
       message: 'Please enter a search query.',
       position: 'topRight',
+      iconUrl: './img/error-icon.svg',
     });
     return;
   }
@@ -34,10 +38,11 @@ form.addEventListener('submit', async e => {
 
     if (data.hits.length === 0) {
       iziToast.info({
-        title: 'No results',
+        title: '',
         message:
           'Sorry, there are no images matching your search query. Please try again!',
         position: 'topRight',
+        iconUrl: './img/error-icon.svg',
       });
       hideLoader();
       return;
