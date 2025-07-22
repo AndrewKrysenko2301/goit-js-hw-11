@@ -1,3 +1,6 @@
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 import { getImagesByQuery } from './js/pixabay-api.js';
 import {
   createGallery,
@@ -6,13 +9,14 @@ import {
   hideLoader,
 } from './js/render-functions.js';
 
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
-iziToast.settings({
-  position: 'topRight',
-});
 import errorIcon from './img/error-icon.svg';
 import closeIcon from './img/close-white.svg';
+
+iziToast.settings({
+  position: 'topRight',
+  timeout: 100000,
+});
+
 const form = document.getElementById('search-form');
 const input = form.querySelector('input[name="searchQuery"]');
 
